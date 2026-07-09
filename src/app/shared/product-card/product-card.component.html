@@ -28,22 +28,20 @@
       <!-- Overlay gradient on hover -->
       <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
 
-      <!-- Badges -->
-      <div class="absolute top-3 left-3 flex flex-col gap-1.5">
-        @if (product.isNew) {
-          <span class="badge badge-green text-xs shadow-sm">New</span>
-        }
-        @if (product.isFeatured) {
-          <span class="badge badge-blue text-xs shadow-sm">Featured</span>
-        }
-      </div>
-
       <!-- Price badge top-right -->
-      <div class="absolute top-3 right-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl px-3 py-1.5 shadow-lg">
-        <span class="text-base font-black text-blue-700 dark:text-blue-400">
+      <div class="absolute top-3 right-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl px-3 py-1.5 shadow-lg text-right">
+        <span class="text-base font-black text-blue-700 dark:text-blue-400 block">
           ₹{{ product.price.toLocaleString('en-IN') }}
         </span>
+        @if (product.originalPrice) {
+          <span class="text-xs text-gray-400 line-through block">₹{{ product.originalPrice.toLocaleString('en-IN') }}</span>
+        }
       </div>
+      @if (product.originalPrice) {
+        <div class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-lg shadow">
+          Save ₹{{ (product.originalPrice - product.price).toLocaleString('en-IN') }}
+        </div>
+      }
 
       <!-- Quick action -->
       <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-400">
