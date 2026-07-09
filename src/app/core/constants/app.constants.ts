@@ -11,16 +11,16 @@ export const APP_CONSTANTS = {
     LANGUAGE: 'annai_language',
   },
   CONTACT_INFO: {
-    address: '45, Anna Nagar, Chennai, Tamil Nadu — 600 040',
-    phone: '+91 99999 99999',
+    address: 'bus stand, new, Salem main road, Nallampalli, Tamil Nadu 636807',
+    phone: '+91 9715238009',
     email: 'info@annaiaquatech.com',
-    hours: 'Mon – Sat: 9:00 AM – 7:00 PM',
+    hours: 'Mon – Sun: 9:00 AM – 7:00 PM',
   },
   STATS: [
-    { value: 25000, label: 'Happy Customers', suffix: '+', icon: 'users' },
-    { value: 15000, label: 'Purifiers Installed', suffix: '+', icon: 'package' },
+    { value: 10000, label: 'Happy Customers', suffix: '+', icon: 'users' },
+    { value: 7000, label: 'Purifiers Installed', suffix: '+', icon: 'package' },
     { value: 50, label: 'Service Areas', suffix: '+', icon: 'map-pin' },
-    { value: 12, label: 'Years Experience', suffix: '+', icon: 'award' },
+    { value: 16, label: 'Years Experience', suffix: '+', icon: 'award' },
   ],
   FEATURES: [
     {
