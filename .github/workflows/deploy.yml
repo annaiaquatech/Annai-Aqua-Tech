@@ -11,6 +11,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -20,30 +24,39 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 1. Checkout source code
+      # -----------------------------------------
+      # 1. Checkout repository
+      # -----------------------------------------
       - name: Checkout code
         uses: actions/checkout@v6
 
+      # -----------------------------------------
       # 2. Setup Node.js
+      # -----------------------------------------
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 20
           cache: npm
 
+      # -----------------------------------------
       # 3. Install dependencies
+      # -----------------------------------------
       - name: Install dependencies
-        run: |
-          npm ci || npm install
+        run: npm install
 
-      # 4. Print versions
-      - name: Print versions
+      # -----------------------------------------
+      # 4. Check Node / Angular versions
+      # -----------------------------------------
+      - name: Check versions
         run: |
-          node -v
-          npm -v
-          npx ng version || true
+          node --version
+          npm --version
+          npx ng version
 
-      # 5. Build Angular app
+      # -----------------------------------------
+      # 5. Build Angular application
+      # -----------------------------------------
       - name: Build Angular app
         env:
           NODE_OPTIONS: --max_old_space_size=4096
@@ -51,9 +64,11 @@ jobs:
           npx ng build \
             --configuration=production \
             --output-path=dist/site \
-            --base-href="/Annai-Aqua-Tech/"
+            --base-href="/"
 
-      # 6. Find Angular output directory
+      # -----------------------------------------
+      # 6. Find Angular build output
+      # -----------------------------------------
       - name: Resolve publish directory
         id: resolve_publish_dir
         shell: bash
@@ -65,24 +80,39 @@ jobs:
           elif [ -d "dist/site" ]; then
             publish_dir="dist/site"
           else
-            echo "ERROR: Angular build output not found."
+            echo "ERROR: Angular build output directory not found."
+            echo "Contents of dist:"
+            ls -la dist || true
             exit 1
           fi
 
-          echo "Publishing: $publish_dir"
+          echo "Publish directory: $publish_dir"
           echo "publish_dir=$publish_dir" >> "$GITHUB_OUTPUT"
 
-      # 7. Configure GitHub Pages
-      - name: Setup Pages
+      # -----------------------------------------
+      # 7. Add GitHub Pages custom domain
+      # -----------------------------------------
+      - name: Add custom domain
+        run: |
+          echo "www.annaiaquatech.com" > "${{ steps.resolve_publish_dir.outputs.publish_dir }}/CNAME"
+
+      # -----------------------------------------
+      # 8. Configure GitHub Pages
+      # -----------------------------------------
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      # 8. Upload build artifact
+      # -----------------------------------------
+      # 9. Upload Pages artifact
+      # -----------------------------------------
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ steps.resolve_publish_dir.outputs.publish_dir }}
 
-      # 9. Deploy to GitHub Pages
+      # -----------------------------------------
+      # 10. Deploy to GitHub Pages
+      # -----------------------------------------
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
