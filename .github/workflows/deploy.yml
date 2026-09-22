@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Angular App to GitHub Pages
 
 on:
   push:
@@ -6,61 +6,83 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      # 1. Checkout source code
       - name: Checkout code
         uses: actions/checkout@v6
 
+      # 2. Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: 18
           cache: npm
 
-      - name: Clean install dependencies
+      # 3. Install dependencies
+      - name: Install dependencies
         run: |
-          rm -rf node_modules package-lock.json
-          npm cache clean --force
-          npm install
-          npm install browserslist@4.23.0
+          npm ci || npm install
 
+      # 4. Print versions
       - name: Print versions
         run: |
           node -v
           npm -v
           npx ng version || true
 
+      # 5. Build Angular app
       - name: Build Angular app
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-        run: npx ng build --configuration=production --output-path=dist/site --base-href="/annai-aqua-tech/"
+        run: |
+          npx ng build \
+            --configuration=production \
+            --output-path=dist/site \
+            --base-href="/Annai-Aqua-Tech/"
 
+      # 6. Find Angular output directory
       - name: Resolve publish directory
         id: resolve_publish_dir
         shell: bash
         run: |
           set -e
-          publish_dir="dist/site/browser"
-          if [ ! -d "$publish_dir" ]; then
-            publish_dir="dist/site"
-          fi
-          echo "publish_dir=$publish_dir" >> $GITHUB_OUTPUT
 
+          if [ -d "dist/site/browser" ]; then
+            publish_dir="dist/site/browser"
+          elif [ -d "dist/site" ]; then
+            publish_dir="dist/site"
+          else
+            echo "ERROR: Angular build output not found."
+            exit 1
+          fi
+
+          echo "Publishing: $publish_dir"
+          echo "publish_dir=$publish_dir" >> "$GITHUB_OUTPUT"
+
+      # 7. Configure GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # 8. Upload build artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ steps.resolve_publish_dir.outputs.publish_dir }}
 
+      # 9. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
