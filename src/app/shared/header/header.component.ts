@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     { label: 'Home',       path: '/',        exact: true  },
     { label: 'Products',   path: '/products', exact: false },
     { label: 'Contact Us', path: '/contact',  exact: false },
-    { label: 'Login',      path: '/login',    exact: false },
+    // { label: 'Login',      path: '/login',    exact: false },
   ];
 
   private routerSub?: Subscription;
