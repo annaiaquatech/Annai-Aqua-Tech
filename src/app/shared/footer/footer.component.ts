@@ -26,7 +26,7 @@ export class FooterComponent {
     { label: 'Home', path: '/' },
     { label: 'Products', path: '/products' },
     { label: 'Contact Us', path: '/contact' },
-    { label: 'Admin Login', path: '/login' },
+    // { label: 'Admin Login', path: '/login' },
   ];
 
   productLinks = [

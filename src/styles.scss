@@ -486,3 +486,8 @@ img, video, svg, canvas { transition: none !important; }
 .transition-all { transition-property: all !important; }
 .transition-transform { transition-property: transform !important; }
 .transition-opacity { transition-property: opacity !important; }
+
+
+.mat-mdc-notch-piece.mdc-notched-outline__notch { 
+ border-right: 0px !important;
+}

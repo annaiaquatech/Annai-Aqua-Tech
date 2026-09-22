@@ -12,9 +12,9 @@ import emailjs from '@emailjs/browser';
 import { APP_CONSTANTS } from '../../core/constants/app.constants';
 
 // ── Replace these with your EmailJS credentials ──────────────────
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID  = 'service_ca6hyuc';
+const EMAILJS_TEMPLATE_ID = 'template_ml772eh';
+const EMAILJS_PUBLIC_KEY  = '9fJLzgVO1MM9yVrYQ';
 // ─────────────────────────────────────────────────────────────────
 
 @Component({

@@ -65,7 +65,11 @@ jobs:
 
       - name: Add custom domain
         run: |
-          echo "www.annaiaquatech.com" > "${{ steps.output.outputs.publish_dir }}/CNAME"
+          echo "annaiaquatech.com" > "${{ steps.output.outputs.publish_dir }}/CNAME"
+
+      - name: Add SPA fallback
+        run: |
+          cp "${{ steps.output.outputs.publish_dir }}/index.html" "${{ steps.output.outputs.publish_dir }}/404.html"
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
