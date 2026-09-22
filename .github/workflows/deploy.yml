@@ -24,22 +24,24 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      - name: Show versions
+      # Install dependencies FIRST
+      - name: Install dependencies
+        run: npm ci
+
+      # Now Angular CLI is available
+      - name: Check versions
         run: |
           node --version
           npm --version
           npx ng version
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Check Browserslist
+      - name: Check dependencies
         run: |
           npm list browserslist caniuse-lite autoprefixer || true
 
@@ -58,15 +60,13 @@ jobs:
         run: |
           set -e
 
-          echo "Checking Angular build output..."
-
           if [ -d "dist/site/browser" ]; then
-            echo "Build directory: dist/site/browser"
             echo "publish_dir=dist/site/browser" >> "$GITHUB_OUTPUT"
+            echo "Using dist/site/browser"
 
           elif [ -d "dist/site" ]; then
-            echo "Build directory: dist/site"
             echo "publish_dir=dist/site" >> "$GITHUB_OUTPUT"
+            echo "Using dist/site"
 
           else
             echo "ERROR: Angular build output not found"
@@ -78,14 +78,14 @@ jobs:
         run: |
           echo "www.annaiaquatech.com" > "${{ steps.output.outputs.publish_dir }}/CNAME"
 
-      - name: Display generated CNAME
+      - name: Verify CNAME
         run: |
           cat "${{ steps.output.outputs.publish_dir }}/CNAME"
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload GitHub Pages artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ steps.output.outputs.publish_dir }}
@@ -100,6 +100,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
