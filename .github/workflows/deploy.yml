@@ -12,38 +12,38 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: github-pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
+    name: Build Angular App
     runs-on: ubuntu-latest
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
+      - name: Show versions
+        run: |
+          node --version
+          npm --version
+          npx ng version
+
       - name: Install dependencies
         run: npm ci
 
-      - name: Check versions
+      - name: Check Browserslist
         run: |
-          node -v
-          npm -v
-          npx ng version
-          npm list browserslist caniuse-lite
+          npm list browserslist caniuse-lite autoprefixer || true
 
-      - name: Build Angular app
+      - name: Build Angular application
         env:
           NODE_OPTIONS: --max_old_space_size=4096
         run: |
@@ -52,33 +52,54 @@ jobs:
             --output-path=dist/site \
             --base-href="/"
 
-      - name: Resolve publish directory
-        id: resolve_publish_dir
+      - name: Find build output
+        id: output
         shell: bash
         run: |
           set -e
 
-          publish_dir="dist/site/browser"
+          echo "Checking Angular build output..."
 
-          if [ ! -d "$publish_dir" ]; then
-            publish_dir="dist/site"
+          if [ -d "dist/site/browser" ]; then
+            echo "Build directory: dist/site/browser"
+            echo "publish_dir=dist/site/browser" >> "$GITHUB_OUTPUT"
+
+          elif [ -d "dist/site" ]; then
+            echo "Build directory: dist/site"
+            echo "publish_dir=dist/site" >> "$GITHUB_OUTPUT"
+
+          else
+            echo "ERROR: Angular build output not found"
+            find dist -maxdepth 4 -type f | head -100
+            exit 1
           fi
-
-          echo "Publishing: $publish_dir"
-          echo "publish_dir=$publish_dir" >> "$GITHUB_OUTPUT"
 
       - name: Add custom domain
         run: |
-          echo "www.annaiaquatech.com" > "${{ steps.resolve_publish_dir.outputs.publish_dir }}/CNAME"
+          echo "www.annaiaquatech.com" > "${{ steps.output.outputs.publish_dir }}/CNAME"
+
+      - name: Display generated CNAME
+        run: |
+          cat "${{ steps.output.outputs.publish_dir }}/CNAME"
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Pages artifact
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ steps.resolve_publish_dir.outputs.publish_dir }}
+          path: ${{ steps.output.outputs.publish_dir }}
 
-      - name: Deploy to GitHub Pages
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
