@@ -345,7 +345,7 @@
       <app-loading-spinner></app-loading-spinner>
     } @else if (featuredProducts().length > 0) {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        @for (product of featuredProducts().slice(0, 4); track product.id) {
+        @for (product of featuredProducts().slice(0, 8); track product.id) {
           <app-product-card [product]="product"></app-product-card>
         }
       </div>
@@ -515,7 +515,7 @@
 <!-- ============================================================
      TESTIMONIALS
      ============================================================ -->
-<section class="section bg-white dark:bg-gray-950">
+<section class="section bg-white dark:bg-gray-950 hidden">
   <div class="container-custom">
     <div class="text-center mb-14">
       <span class="badge badge-blue mb-4">Testimonials</span>

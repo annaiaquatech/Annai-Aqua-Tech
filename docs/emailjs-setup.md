@@ -6,7 +6,7 @@ Use `docs/emailjs-contact-template.html` as the HTML content for the EmailJS tem
 
 - Template name: `Annai Aqua Tech Contact Enquiry`
 - Subject: `New {{enquiry_type}} enquiry from {{from_name}}`
-- To email: your business inbox, for example `info@annaiaquatech.com`
+- To email: your business inbox, for example `annaiaquatechsales@gmail.com`
 - From name: `{{from_name}}`
 - Reply to: `{{reply_to}}`
 

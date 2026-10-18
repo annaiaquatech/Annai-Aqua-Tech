@@ -89,7 +89,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit(): void {
     const products = this.productService.getProducts();
     const featured = products.filter(p => p.isFeatured);
-    this.featuredProducts.set(featured.length ? featured : products.slice(0, 4));
+    const featuredIds = new Set(featured.map(p => p.id));
+    const remaining = products.filter(p => !featuredIds.has(p.id));
+    this.featuredProducts.set([...featured, ...remaining].slice(0, 8));
     this.isLoading.set(false);
     this.startSlider();
   }

@@ -1,155 +1,385 @@
+
 [
   {
     "id": 1,
-    "name": "Aqua Emereld 9-Stage RO+UV+UF+Copper Alkaline",
-    "price": 11500,
-    "originalPrice": 14500,
+    "name": "Purosis Plus RO + Copper Water Purifier",
+    "price": 13000,
+    "originalPrice": 15000,
     "capacity": "12 L/Hr",
-    "storage": "13 L",
-    "description": "Aqua Emereld's premium 9-stage wall-mount purifier with RO+UV+UF+Copper Alkaline technology. Washable 13-litre storage tank, smart LED panel (ON / Tank Full / Purification), 1-year filter warranty & 2-year pump warranty.",
+    "storage": "14 L",
+    "description": "Purosis Plus water purifier featuring RO + Copper purification technology, LED indication, automatic cutoff and multiple colour options.",
     "features": [
-      "9-Stage RO + UV + UF + Copper Alkaline",
-      "13 Litre Washable Storage Tank",
-      "Smart LED Display (ON / Tank Full / Purification)",
-      "1 Year Total Filter Warranty",
-      "2 Year Pump Warranty",
-      "Copper-Infused Alkaline Water",
-      "Auto Shut-Off When Tank Full",
-      "Food-Grade ABS Plastic Body"
+      "RO + Copper Purification",
+      "Multiple Colour Options",
+      "LED Indication",
+      "Automatic Cut-Off",
+      "14 Litre Storage Tank"
     ],
     "category": "home",
     "isNew": false,
     "isFeatured": true,
     "rating": 4.8,
-    "reviewCount": 214,
+    "reviewCount": 0,
+      "variants": [
+        {
+          "colorName": "Pink",
+          "colorCode": "#ec4899",
+          "images": [
+            "images/purosis-plus/purosis_pink_product_800x800.jpg",
+            "images/purosis-plus/purosis_pink_installed_800x800.jpg"
+          ]
+        },
+        {
+          "colorName": "Green",
+          "colorCode": "#059669",
+          "images": [
+            "images/purosis-plus/purosis_green_product_800x800.jpg"
+          ]
+        }
+      ]
+  },
+  {
+    "id": 2,
+    "name": "Aqua Flip RO + UV + UF + Copper Alkaline Water Purifier",
+    "price": 11500,
+    "originalPrice": 13500,
+    "capacity": "12 L/Hr",
+    "storage": "13 L",
+    "description": "Aqua Flip water purifier with RO + UV + UF + Copper Alkaline purification technology, LED indication, automatic cutoff and multiple colour options.",
+    "features": [
+      "RO + UV + UF + Copper Alkaline",
+      "Multiple Colour Options",
+      "LED Indication",
+      "Automatic Cut-Off",
+      "13 Litre Storage Tank"
+    ],
+    "category": "home",
+    "isNew": false,
+    "isFeatured": true,
+    "rating": 4.8,
+    "reviewCount": 0,
     "variants": [
       {
         "colorName": "Black",
         "colorCode": "#1e293b",
-        "images": [
-          "https://images.romegamart.com/media/product_image/Aqua_Emerald_Active_Copper_Black_1_kJXmtQ8_wzmJZ42_LNZnOYO_xERD0Vi.jpg",
-          "https://images.romegamart.com/media/product_image/Aqua_Emerald_Active_Copper_Black_2_gpvGQLB_wcIwjLR_C0bNri1_uzJJNHm.jpg"
-        ]
+        "images": []
       },
       {
         "colorName": "White",
         "colorCode": "#f8fafc",
-        "images": [
-          "https://aquaplusro.in/assets/product/IMG-20211016-WA00181.jpg",
-          "https://aquaplusro.in/assets/product/aquapearl_ro3.png"
-        ]
+        "images": []
       },
       {
         "colorName": "Blue",
         "colorCode": "#2563eb",
-        "images": [
-          "https://aquaplusro.in/assets/product/aquapearl_ro3.png",
-          "https://aquaplusro.in/assets/product/IMG-20211016-WA00181.jpg"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Aqua Innovica 8-Stage RO+UV+Copper Alkaline",
-    "price": 11500,
-    "originalPrice": 14500,
-    "capacity": "12 L/Hr",
-    "storage": "10 L",
-    "description": "Aqua Innovica's advanced 8-stage purifier combines RO+UV+Active Copper+Bio-Alkaline technology with a smart LED display. Available in multiple premium colours with sleek wall-mount design ideal for modern homes.",
-    "features": [
-      "8-Stage RO + UV + Copper Alkaline",
-      "10 Litre Storage Tank",
-      "Smart LED Display Indicators",
-      "Active Copper + Bio-Alkaline Technology",
-      "Handles Up to 2500 TDS",
-      "UV LED Disinfection",
-      "TDS Controller Included",
-      "Multi-Colour Premium Finish"
-    ],
-    "category": "home",
-    "isNew": true,
-    "isFeatured": true,
-    "rating": 4.7,
-    "reviewCount": 178,
-    "variants": [
-      {
-        "colorName": "Black",
-        "colorCode": "#1e293b",
-        "images": [
-          "https://vcarecompany.in/wp-content/uploads/2025/05/aqua-innovica-ro-water-purifier.webp"
-        ]
-      },
-      {
-        "colorName": "Metallic Blue",
-        "colorCode": "#3b82f6",
-        "images": [
-          "https://www.spareking.com/cdn/shop/files/rn-image_picker_lib_temp_2900a813-fbcf-4861-b2cb-f51648fc66d3.jpg?v=1757039484"
-        ]
-      },
-      {
-        "colorName": "Gray",
-        "colorCode": "#64748b",
-        "images": [
-          "https://vcarecompany.in/wp-content/uploads/2025/05/aqua-innovica-ro-water-purifier.webp"
-        ]
-      },
-      {
-        "colorName": "White",
-        "colorCode": "#f8fafc",
-        "images": [
-          "https://vcarecompany.in/wp-content/uploads/2025/05/aqua-innovica-ro-water-purifier.webp"
-        ]
+        "images": []
       }
     ]
   },
   {
     "id": 3,
-    "name": "Dolphin 5-Stage RO+Copper Alkaline Purifier",
-    "price": 7500,
-    "originalPrice": 8500,
-    "capacity": "10 L/Hr",
-    "storage": "8 L",
-    "description": "Dolphin's compact and affordable 5-stage RO+Copper Alkaline purifier with smart LED display. Perfect for small families, it delivers copper-enriched alkaline water at an unbeatable price.",
+    "name": "Aqua Innovica RO + UV + Copper Alkaline Water Purifier",
+    "price": 12500,
+    "originalPrice": 14500,
+    "capacity": "12 L/Hr",
+    "storage": "10 L",
+    "description": "Aqua Innovica water purifier with RO + UV + Copper Alkaline technology, LED indication, automatic cutoff and four colour options.",
     "features": [
-      "5-Stage RO + Copper Alkaline",
-      "8 Litre Storage Tank",
-      "Smart LED Display",
-      "Active Copper Technology",
-      "Alkaline pH Booster",
-      "Compact Wall-Mount Design",
-      "Low Maintenance Filters",
-      "Food-Grade Body Material"
+      "RO + UV + Copper Alkaline",
+      "Multiple Colour Options",
+      "LED Indication",
+      "Automatic Cut-Off",
+      "10 Litre Storage Tank"
     ],
     "category": "home",
     "isNew": false,
-    "isFeatured": true,
-    "rating": 4.6,
-    "reviewCount": 312,
+    "isFeatured": false,
+    "rating": 4.7,
+    "reviewCount": 0,
     "variants": [
       {
         "colorName": "Blue",
         "colorCode": "#2563eb",
-        "images": [
-          "https://agrawaltotalsolution.com/assets/images/6819bc8015e54_cbe7dc413c1115db.jpg",
-          "https://agrawaltotalsolution.com/assets/images/680a513ecc5ac.jpg"
-        ]
+        "images": []
       },
       {
-        "colorName": "Green",
-        "colorCode": "#059669",
-        "images": [
-          "https://agrawaltotalsolution.com/assets/images/680a513eccede.jpg",
-          "https://agrawaltotalsolution.com/assets/images/6819bc8015e54_cbe7dc413c1115db.jpg"
-        ]
+        "colorName": "Gray",
+        "colorCode": "#6b7280",
+        "images": []
       },
       {
         "colorName": "Black",
         "colorCode": "#1e293b",
-        "images": [
-          "https://agrawaltotalsolution.com/assets/images/680a513ecd0f0.jpg",
-          "https://agrawaltotalsolution.com/assets/images/680a513ecc5ac.jpg"
-        ]
+        "images": []
+      },
+      {
+        "colorName": "White",
+        "colorCode": "#f8fafc",
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Aqua Emerald RO + UV + UF + Copper Alkaline Water Purifier",
+    "price": 12500,
+    "originalPrice": 14500,
+    "capacity": "12 L/Hr",
+    "storage": "12 L",
+    "description": "Aqua Emerald water purifier with RO + UV + UF + Copper Alkaline technology, LED on/off indication, automatic cutoff and multiple colour options.",
+    "features": [
+      "RO + UV + UF + Copper Alkaline",
+      "Multiple Colour Options",
+      "LED On/Off Indication",
+      "Automatic Cut-Off",
+      "12 Litre Storage Tank"
+    ],
+    "category": "home",
+    "isNew": false,
+    "isFeatured": true,
+    "rating": 4.8,
+    "reviewCount": 0,
+    "variants": [
+      {
+        "colorName": "Blue",
+        "colorCode": "#2563eb",
+        "images": []
+      },
+      {
+        "colorName": "White",
+        "colorCode": "#f8fafc",
+        "images": []
+      },
+      {
+        "colorName": "Black",
+        "colorCode": "#1e293b",
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Merlin RO + UV + UF + TDS + Copper Alkaline Water Purifier",
+    "price": 22500,
+    "originalPrice": 25500,
+    "capacity": "12 L/Hr",
+    "storage": "12 L",
+    "description": "Merlin premium water purifier featuring RO + UV + UF + TDS control + Copper Alkaline technology, on/off indication and a 12-litre storage tank.",
+    "features": [
+      "RO + UV + UF Purification",
+      "TDS Control",
+      "Copper Alkaline Technology",
+      "White and Black Colour Options",
+      "LED On/Off Indication",
+      "Automatic Cut-Off",
+      "12 Litre Storage Tank"
+    ],
+    "category": "home",
+    "isNew": false,
+    "isFeatured": true,
+    "rating": 4.8,
+    "reviewCount": 0,
+    "variants": [
+      {
+        "colorName": "White",
+        "colorCode": "#f8fafc",
+        "images": []
+      },
+      {
+        "colorName": "Black",
+        "colorCode": "#1e293b",
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Aqua Puro Life RO + UV + UF + TDS + Copper Alkaline Water Purifier",
+    "price": 14500,
+    "originalPrice": 18500,
+    "capacity": "12 L/Hr",
+    "storage": "12 L",
+    "description": "Aqua Puro Life water purifier with RO + UV + UF + TDS control + Copper Alkaline technology, LED indication, automatic cutoff and black or white colour options.",
+    "features": [
+      "RO + UV + UF Purification",
+      "TDS Control",
+      "Copper Alkaline Technology",
+      "Black and White Colour Options",
+      "LED Indication",
+      "Automatic Cut-Off",
+      "12 Litre Storage Tank"
+    ],
+    "category": "home",
+    "isNew": false,
+    "isFeatured": false,
+    "rating": 4.7,
+    "reviewCount": 0,
+    "variants": [
+      {
+        "colorName": "Black",
+        "colorCode": "#1e293b",
+        "images": []
+      },
+      {
+        "colorName": "White",
+        "colorCode": "#f8fafc",
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Aqua Dolphin 5-Stage RO + Mineral Water Purifier",
+    "price": 7500,
+    "originalPrice": 8500,
+    "capacity": "12 L/Hr",
+    "storage": "8 L",
+    "description": "Aqua Dolphin water purifier featuring 5-stage RO + Mineral purification, on/off indication, automatic cutoff and blue colour options.",
+    "features": [
+      "5-Stage Filtration",
+      "RO + Mineral Purification",
+      "Blue and Sky Blue Colour Options",
+      "On/Off Indication",
+      "Automatic Cut-Off",
+      "8 Litre Storage Tank"
+    ],
+    "category": "home",
+    "isNew": false,
+    "isFeatured": false,
+    "rating": 4.6,
+    "reviewCount": 0,
+    "variants": [
+      {
+        "colorName": "Blue",
+        "colorCode": "#2563eb",
+        "images": []
+      },
+      {
+        "colorName": "Sky Blue",
+        "colorCode": "#38bdf8",
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Aqua D Top 5-Stage RO + Copper Water Purifier",
+    "price": 8000,
+    "originalPrice": 9000,
+    "capacity": "12 L/Hr",
+    "storage": "12 L",
+    "description": "Aqua D Top water purifier with 5-stage RO + Copper purification, on/off indication, automatic cutoff and blue or sky blue colour options.",
+    "features": [
+      "5-Stage Filtration",
+      "RO + Copper Purification",
+      "Blue and Sky Blue Colour Options",
+      "On/Off Indication",
+      "Automatic Cut-Off",
+      "12 Litre Storage Tank"
+    ],
+    "category": "home",
+    "isNew": false,
+    "isFeatured": false,
+    "rating": 4.6,
+    "reviewCount": 0,
+    "variants": [
+      {
+        "colorName": "Blue",
+        "colorCode": "#2563eb",
+        "images": []
+      },
+      {
+        "colorName": "Sky Blue",
+        "colorCode": "#38bdf8",
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Aqua Hiflow 5-Stage RO + Copper Water Purifier",
+    "price": 9000,
+    "originalPrice": 10000,
+    "capacity": "12 L/Hr",
+    "storage": "19 L",
+    "description": "Aqua Hiflow water purifier featuring 5-stage RO + Copper purification, automatic cutoff, indication and four colour options with a 19-litre storage tank.",
+    "features": [
+      "5-Stage Filtration",
+      "RO + Copper Purification",
+      "Blue, Black, Gray and Red Colour Options",
+      "Indication Display",
+      "Automatic Cut-Off",
+      "19 Litre Storage Tank"
+    ],
+    "category": "home",
+    "isNew": false,
+    "isFeatured": false,
+    "rating": 4.7,
+    "reviewCount": 0,
+    "variants": [
+      {
+        "colorName": "Blue",
+        "colorCode": "#2563eb",
+        "images": []
+      },
+      {
+        "colorName": "Black",
+        "colorCode": "#1e293b",
+        "images": []
+      },
+      {
+        "colorName": "Gray",
+        "colorCode": "#6b7280",
+        "images": []
+      },
+      {
+        "colorName": "Red",
+        "colorCode": "#dc2626",
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Aqua Mars 5-Stage RO + Copper Alkaline Water Purifier",
+    "price": 9000,
+    "originalPrice": 10500,
+    "capacity": "12 L/Hr",
+    "storage": "10 L",
+    "description": "Aqua Mars water purifier with 5-stage RO + Copper Alkaline purification, LED indication, automatic cutoff and multiple colour options.",
+    "features": [
+      "5-Stage Filtration",
+      "RO + Copper Alkaline Purification",
+      "Multiple Colour Options",
+      "LED Indication",
+      "Automatic Cut-Off",
+      "10 Litre Storage Tank"
+    ],
+    "category": "home",
+    "isNew": false,
+    "isFeatured": false,
+    "rating": 4.7,
+    "reviewCount": 0,
+    "variants": [
+      {
+        "colorName": "Blue",
+        "colorCode": "#2563eb",
+        "images": []
+      },
+      {
+        "colorName": "Black",
+        "colorCode": "#1e293b",
+        "images": []
+      },
+      {
+        "colorName": "Gray",
+        "colorCode": "#6b7280",
+        "images": []
+      },
+      {
+        "colorName": "Stone Beige",
+        "colorCode": "#a8a29e",
+        "images": []
       }
     ]
   }

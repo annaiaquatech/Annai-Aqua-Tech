@@ -12,6 +12,7 @@
           [src]="isHovered() && hoverImage !== mainImage ? hoverImage : mainImage"
           [alt]="product.name"
           class="h-full w-full object-contain p-5 transition-transform duration-700"
+          [class.scale-150]="product.id === 1 && !isHovered()"
           [class.scale-110]="isHovered()"
           (error)="onImgError()"
           loading="lazy"

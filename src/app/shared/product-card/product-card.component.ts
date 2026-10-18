@@ -34,11 +34,21 @@ export class ProductCardComponent {
   }
 
   get mainImage(): string {
-    return this.variant?.images?.[0] ?? this.fallbackSvg(this.variant?.colorCode ?? '#2563eb');
+    const image = this.variant?.images?.[0];
+    return image
+      ? this.resolveImagePath(image)
+      : this.fallbackSvg(this.variant?.colorCode ?? '#2563eb');
   }
 
   get hoverImage(): string {
-    return this.variant?.images?.[1] ?? this.mainImage;
+    const image = this.variant?.images?.[1];
+    return image ? this.resolveImagePath(image) : this.mainImage;
+  }
+
+  private resolveImagePath(path: string): string {
+    if (/^(data:|https?:\/\/)/i.test(path)) return path;
+    const baseUrl = document.querySelector('base')?.href || document.baseURI;
+    return new URL(path.replace(/^\/+/, ''), baseUrl).toString();
   }
 
   selectVariant(i: number, e: Event): void {

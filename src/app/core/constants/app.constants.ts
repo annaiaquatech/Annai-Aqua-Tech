@@ -11,9 +11,9 @@ export const APP_CONSTANTS = {
     LANGUAGE: 'annai_language',
   },
   CONTACT_INFO: {
-    address: 'bus stand, new, Salem main road, Nallampalli, Tamil Nadu 636807',
+    address: 'Salem main road, New bus stand, Nallampalli, Tamil Nadu 636807',
     phone: '+91 9715238009',
-    email: 'info@annaiaquatech.com',
+    email: 'annaiaquatechsales@gmail.com',
     hours: 'Mon – Sun: 9:00 AM – 7:00 PM',
   },
   STATS: [

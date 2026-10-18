@@ -24,9 +24,18 @@ export class ProductService {
   }
 
   private mergeProducts(jsonProducts: Product[], localProducts: Product[]): Product[] {
-    const localIds = new Set(localProducts.map((p) => p.id));
+    const jsonById = new Map(jsonProducts.map((product) => [product.id, product]));
+    const mergedLocal = localProducts.map((localProduct) => {
+      const jsonProduct = jsonById.get(localProduct.id);
+      if (!jsonProduct || localProduct.id !== 1) return localProduct;
+
+      // Product 1's image paths are maintained in products.json. Older local
+      // storage entries can otherwise keep pointing at images that no longer exist.
+      return { ...localProduct, variants: jsonProduct.variants };
+    });
+    const localIds = new Set(mergedLocal.map((p) => p.id));
     const filtered = jsonProducts.filter((p) => !localIds.has(p.id));
-    return [...filtered, ...localProducts].sort((a, b) => a.id - b.id);
+    return [...filtered, ...mergedLocal].sort((a, b) => a.id - b.id);
   }
 
   getProducts(): Product[] {
