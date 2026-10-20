@@ -38,7 +38,14 @@ export class ProductGalleryComponent implements OnChanges {
     if (this.imageError()[this.activeIndex()]) {
       return this.getFallback();
     }
-    return this.images[this.activeIndex()] ?? this.getFallback();
+    const image = this.images[this.activeIndex()];
+    return image ? this.resolveImagePath(image) : this.getFallback();
+  }
+
+  resolveImagePath(path: string): string {
+    if (/^(data:|https?:\/\/)/i.test(path)) return path;
+    const baseUrl = document.querySelector('base')?.href || document.baseURI;
+    return new URL(path.replace(/^\/+/, ''), baseUrl).toString();
   }
 
   selectImage(index: number): void {

@@ -1,4 +1,3 @@
-
 [
   {
     "id": 1,
@@ -20,23 +19,64 @@
     "isFeatured": true,
     "rating": 4.8,
     "reviewCount": 0,
-      "variants": [
-        {
-          "colorName": "Pink",
-          "colorCode": "#ec4899",
-          "images": [
-            "images/purosis-plus/purosis_pink_product_800x800.jpg",
-            "images/purosis-plus/purosis_pink_installed_800x800.jpg"
-          ]
-        },
-        {
-          "colorName": "Green",
-          "colorCode": "#059669",
-          "images": [
-            "images/purosis-plus/purosis_green_product_800x800.jpg"
-          ]
-        }
-      ]
+    "variants": [
+      {
+        "colorName": "Copper Gold",
+        "colorCode": "#b87333",
+        "images": [
+          "images/purosis-plus/Copper-Gold.png"
+        ]
+      },
+      {
+        "colorName": "Apple White",
+        "colorCode": "#f5f5f2",
+        "images": [
+          "images/purosis-plus/Apple-White.png"
+        ]
+      },
+      {
+        "colorName": "Matt Black",
+        "colorCode": "#242424",
+        "images": [
+          "images/purosis-plus/Matt-Black.png"
+        ]
+      },
+      {
+        "colorName": "Matt Grey",
+        "colorCode": "#777a7d",
+        "images": [
+          "images/purosis-plus/Matt-Grey.png"
+        ]
+      },
+      {
+        "colorName": "Ocean Blue",
+        "colorCode": "#25618f",
+        "images": [
+          "images/purosis-plus/Ocean-Blue.png"
+        ]
+      },
+      {
+        "colorName": "Premium Silver",
+        "colorCode": "#b8bcc2",
+        "images": [
+          "images/purosis-plus/Premium-Silver.png"
+        ]
+      },
+      {
+        "colorName": "Puro Pink",
+        "colorCode": "#d98da5",
+        "images": [
+          "images/purosis-plus/Puro-Pink.png"
+        ]
+      },
+      {
+        "colorName": "Spiritual Gold",
+        "colorCode": "#c8a451",
+        "images": [
+          "images/purosis-plus/Spiritual-Gold.png"
+        ]
+      }
+    ]
   },
   {
     "id": 2,
@@ -61,18 +101,31 @@
     "variants": [
       {
         "colorName": "Black",
-        "colorCode": "#1e293b",
-        "images": []
-      },
-      {
-        "colorName": "White",
-        "colorCode": "#f8fafc",
-        "images": []
+        "colorCode": "#202124",
+        "images": [
+          "images/aqua-flip/Black.png"
+        ]
       },
       {
         "colorName": "Blue",
-        "colorCode": "#2563eb",
-        "images": []
+        "colorCode": "#1681d7",
+        "images": [
+          "images/aqua-flip/Blue.png"
+        ]
+      },
+      {
+        "colorName": "Green",
+        "colorCode": "#13bec4",
+        "images": [
+          "images/aqua-flip/Green.png"
+        ]
+      },
+      {
+        "colorName": "Purple",
+        "colorCode": "#51204f",
+        "images": [
+          "images/aqua-flip/Purple.png"
+        ]
       }
     ]
   },
@@ -99,23 +152,31 @@
     "variants": [
       {
         "colorName": "Blue",
-        "colorCode": "#2563eb",
-        "images": []
+        "colorCode": "#829fe8",
+        "images": [
+          "images/aqua-innovica/Blue.png"
+        ]
       },
       {
         "colorName": "Gray",
-        "colorCode": "#6b7280",
-        "images": []
+        "colorCode": "#d1d5db",
+        "images": [
+          "images/aqua-innovica/Gray.png"
+        ]
       },
       {
         "colorName": "Black",
         "colorCode": "#1e293b",
-        "images": []
+        "images": [
+          "images/aqua-innovica/Black.png"
+        ]
       },
       {
         "colorName": "White",
-        "colorCode": "#f8fafc",
-        "images": []
+        "colorCode": "#ffffff",
+        "images": [
+          "images/aqua-innovica/Green.png"
+        ]
       }
     ]
   },
@@ -143,17 +204,24 @@
       {
         "colorName": "Blue",
         "colorCode": "#2563eb",
-        "images": []
+        "images": [
+          "images/aqua-emerald/Blue.png"
+        ]
       },
       {
         "colorName": "White",
         "colorCode": "#f8fafc",
-        "images": []
+        "images": [
+          "images/aqua-emerald/White.png",
+          "images/aqua-emerald/White-01.png"
+        ]
       },
       {
         "colorName": "Black",
         "colorCode": "#1e293b",
-        "images": []
+        "images": [
+          "images/aqua-emerald/Black.png"
+        ]
       }
     ]
   },
@@ -183,12 +251,16 @@
       {
         "colorName": "White",
         "colorCode": "#f8fafc",
-        "images": []
+        "images": [
+          "images/merlin/White.png"
+        ]
       },
       {
         "colorName": "Black",
         "colorCode": "#1e293b",
-        "images": []
+        "images": [
+          "images/merlin/Black.png"
+        ]
       }
     ]
   },
@@ -218,12 +290,16 @@
       {
         "colorName": "Black",
         "colorCode": "#1e293b",
-        "images": []
+        "images": [
+          "images/aqua-puro-life/Black.png"
+        ]
       },
       {
         "colorName": "White",
         "colorCode": "#f8fafc",
-        "images": []
+        "images": [
+          "images/aqua-puro-life/White.png"
+        ]
       }
     ]
   },
@@ -252,12 +328,16 @@
       {
         "colorName": "Blue",
         "colorCode": "#2563eb",
-        "images": []
+        "images": [
+          "images/aqua-dolphin/Blue.png"
+        ]
       },
       {
         "colorName": "Sky Blue",
         "colorCode": "#38bdf8",
-        "images": []
+        "images": [
+          "images/aqua-dolphin/Sky-blue.png"
+        ]
       }
     ]
   },
@@ -286,12 +366,16 @@
       {
         "colorName": "Blue",
         "colorCode": "#2563eb",
-        "images": []
+        "images": [
+          "images/aqua-d-top/Blue.png"
+        ]
       },
       {
         "colorName": "Sky Blue",
         "colorCode": "#38bdf8",
-        "images": []
+        "images": [
+          "images/aqua-d-top/Sky-blue.png"
+        ]
       }
     ]
   },
@@ -320,22 +404,30 @@
       {
         "colorName": "Blue",
         "colorCode": "#2563eb",
-        "images": []
+        "images": [
+          "images/aqua-hiflow/Blue.png"
+        ]
       },
       {
         "colorName": "Black",
         "colorCode": "#1e293b",
-        "images": []
+        "images": [
+          "images/aqua-hiflow/Black.png"
+        ]
       },
       {
-        "colorName": "Gray",
-        "colorCode": "#6b7280",
-        "images": []
+        "colorName": "Green",
+        "colorCode": "#14b8a6",
+        "images": [
+          "images/aqua-hiflow/Green.png"
+        ]
       },
       {
         "colorName": "Red",
-        "colorCode": "#dc2626",
-        "images": []
+        "colorCode": "#b91c1c",
+        "images": [
+          "images/aqua-hiflow/Red.png"
+        ]
       }
     ]
   },
@@ -364,22 +456,30 @@
       {
         "colorName": "Blue",
         "colorCode": "#2563eb",
-        "images": []
+        "images": [
+          "images/aqua-mars/Blue.png"
+        ]
       },
       {
         "colorName": "Black",
         "colorCode": "#1e293b",
-        "images": []
+        "images": [
+          "images/aqua-mars/Black.png"
+        ]
       },
       {
         "colorName": "Gray",
         "colorCode": "#6b7280",
-        "images": []
+        "images": [
+          "images/aqua-mars/Gray.png"
+        ]
       },
       {
         "colorName": "Stone Beige",
-        "colorCode": "#a8a29e",
-        "images": []
+        "colorCode": "#7a3634",
+        "images": [
+          "images/aqua-mars/Stone-Batch.png"
+        ]
       }
     ]
   }

@@ -326,8 +326,8 @@ h1, h2, h3, h4, h5, h6 {
 // COLOR VARIANT SELECTOR
 // ==========================================
 .color-swatch {
-  width: 32px;
-  height: 32px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   cursor: pointer;
   border: 3px solid transparent;
@@ -338,9 +338,8 @@ h1, h2, h3, h4, h5, h6 {
   &:hover { transform: scale(1.25); box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
 
   &.active {
-    border-color: #2563eb;
+    border-color: #00511f;
     transform: scale(1.2);
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2563eb, 0 4px 16px rgba(37,99,235,0.4);
   }
 }
 

@@ -59,7 +59,7 @@
           [attr.aria-label]="'View image ' + (i + 1)"
         >
           <img
-            [src]="imageError()[i] ? getFallback() : img"
+            [src]="imageError()[i] ? getFallback() : resolveImagePath(img)"
             [alt]="productName + ' image ' + (i + 1)"
             class="w-full h-full object-contain p-1 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-700 dark:to-gray-800"
             (error)="onImageError(i)"
